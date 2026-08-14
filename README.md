@@ -1,19 +1,12 @@
-# Kindred Cube website
+# KindredCube web deployment
 
-A dependency-free responsive landing page and download page.
+The contents of `site` are the complete production web root. Copy everything
+inside that folder to `/var/www/kindredcube` on the server.
 
-## Preview locally
+`nginx-kindredcube.conf` is the matching Nginx virtual host. It serves the web
+application at `https://kindredcube.com`, keeps `/download` and
+`/privacy`, `/delete-account`, and `/terms` available; redirects `www`, disables legacy TLS and CBC
+ciphers, and disables dynamic compression for the reported BREACH finding.
 
-From this folder, run:
-
-```bash
-python -m http.server 8080
-```
-
-Then open `http://localhost:8080`.
-
-## Configure downloads
-
-Edit `assets/download-config.js`. Leave `googlePlayUrl` empty to serve
-`downloads/kindredcube.apk`, or add the live Google Play URL to redirect there.
-Replace `appleAppStoreUrl` with the official App Store listing before launch.
+The certificate paths assume a Let's Encrypt certificate for
+`kindredcube.com`. Test the Nginx configuration before reloading the service.
