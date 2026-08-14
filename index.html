@@ -1,44 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#fff9ef">
-  <meta name="description" content="KindredCube is a modern dating app that helps people find their kindred through intelligent matching.">
-  <meta name="keywords" content="KindredCube, online dating application, modern dating app, intelligent matching, find your kindred">
-  <title>KindredCube | Online Dating Application</title>
-  <link rel="icon" type="image/png" href="assets/KindredCubeIcon.png">
-  <link rel="apple-touch-icon" href="assets/KindredCubeIcon.png">
-  <link rel="preload" as="image" href="assets/kindredcube-logo.png">
-  <link rel="stylesheet" href="assets/styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <img class="brand-logo" src="assets/kindredcube-logo.png" alt="Kindred Cube">
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>KindredCube</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <link rel="icon" href="/favicon.ico" /></head>
 
-  <main class="landing-main">
-    <section class="hero-shell" aria-label="Kindred Cube profiles">
-      <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Featured Kindred Cube members">
-        <article class="profile-card"><img src="assets/profiles/american.png" alt="Claire in Brooklyn, New York" fetchpriority="high"><div class="profile-meta"><strong>Claire, 29</strong><span>New York, USA</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/black-american.png" alt="Aaliyah in an Atlanta arts district" decoding="async"><div class="profile-meta"><strong>Aaliyah, 30</strong><span>Atlanta, USA</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/latina.png" alt="Sofía in a Mexico City courtyard" decoding="async"><div class="profile-meta"><strong>Sofía, 28</strong><span>Mexico City, Mexico</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/zulu.png" alt="Nandi on a terrace in Durban" decoding="async"><div class="profile-meta"><strong>Nandi, 31</strong><span>Durban, South Africa</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/japanese.png" alt="Aiko seated in a Tokyo restaurant" decoding="async"><div class="profile-meta"><strong>Aiko, 27</strong><span>Tokyo, Japan</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/filipina.png" alt="Maya aboard a boat near Palawan" decoding="async"><div class="profile-meta"><strong>Maya, 29</strong><span>Palawan, Philippines</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/chinese.png" alt="Mei walking through a Shanghai flower market" decoding="async"><div class="profile-meta"><strong>Mei, 30</strong><span>Shanghai, China</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/zimbabwean.png" alt="Tariro at a café in Harare" decoding="async"><div class="profile-meta"><strong>Tariro, 28</strong><span>Harare, Zimbabwe</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/british.png" alt="Olivia walking beside a London canal" decoding="async"><div class="profile-meta"><strong>Olivia, 31</strong><span>London, UK</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/swiss.png" alt="Léa at a lakeside restaurant in Lucerne" decoding="async"><div class="profile-meta"><strong>Léa, 29</strong><span>Lucerne, Switzerland</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/german.png" alt="Hannah cycling through a Berlin park" decoding="async"><div class="profile-meta"><strong>Hannah, 30</strong><span>Berlin, Germany</span></div></article>
-        <article class="profile-card"><img src="assets/profiles/brazilian.png" alt="Camila aboard a sailboat in Rio de Janeiro" decoding="async"><div class="profile-meta"><strong>Camila, 28</strong><span>Rio de Janeiro, Brazil</span></div></article>
-      </div>
-      <p class="carousel-hint">Swipe or drag to explore</p>
-      <a class="primary-cta" href="/download">
-        <span>Get Connected</span>
-      </a>
-    </section>
-  </main>
-  <script src="assets/carousel.js" defer></script>
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  <script src="/_expo/static/js/web/index-88c77c876d9dc734d0203e30668c1fe6.js" defer></script>
 </body>
 </html>
