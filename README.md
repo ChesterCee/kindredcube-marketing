@@ -1,7 +1,7 @@
 # KindredCube web deployment
 
-The contents of `site` are the complete production web root. Copy everything
-inside that folder to `/var/www/kindredcube` on the server.
+This folder is the complete production web root. Copy the contents of
+`kindredcube-marketing` to `/var/www/kindredcube` on the server.
 
 `nginx-kindredcube.conf` is the matching Nginx virtual host. It serves the web
 application at `https://kindredcube.com`, keeps `/download` and

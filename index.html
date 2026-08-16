@@ -1,10 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>KindredCube</title>
+    <title>KindredCube - Online Dating Platform for Values-Based Compatibility</title>
+    <meta name="description" content="KindredCube is an online dating platform redefining modern dating with compatibility-first matching across values, personality, culture, ethnicity, and real relationship intentions.">
+    <meta name="keywords" content="KindredCube, online dating platform, dating app, compatibility matching, values-based dating, interracial dating, culture-based dating, Black singles, white singles, Latino dating, Japanese dating, INFJ dating, Sigma male, Sigma female, meaningful relationships">
+    <link rel="canonical" href="https://kindredcube.com/">
+    <meta property="og:title" content="KindredCube - Online Dating Platform for Values-Based Compatibility">
+    <meta property="og:description" content="Meet people through deeper compatibility: shared values, personality, culture, relationship intention, and real-world safety features.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kindredcube.com/">
+    <meta name="twitter:card" content="summary_large_image">
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
       /* These styles make the body full-height */
@@ -23,6 +31,7 @@
         flex: 1;
       }
     </style>
+    <link rel="stylesheet" href="/assets/styles.css">
   <link rel="icon" href="/favicon.ico" /></head>
 
   <body>
@@ -31,7 +40,38 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <!-- The root element for your Expo app. -->
+    <a class="home-signin-link" href="/download" aria-label="Sign in to KindredCube">Sign In</a>
     <div id="root"></div>
-  <script src="/_expo/static/js/web/index-88c77c876d9dc734d0203e30668c1fe6.js" defer></script>
+    <footer class="home-footer" aria-label="KindredCube website footer">
+      <span>Copyright 2026, Tectavis Inc. All rights reserved.</span>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/community-guidelines">Guidelines</a>
+      <a href="/cookie-policy">Cookies</a>
+      <a href="mailto:support@kindredcube.com">Support</a>
+    </footer>
+  <script>
+    (function () {
+      var legalPages = {
+        "/about": "/about/index.html",
+        "/privacy": "/privacy/index.html",
+        "/terms": "/terms/index.html",
+        "/community-guidelines": "/community-guidelines/index.html",
+        "/delete-account": "/delete-account/index.html",
+        "/cookie-policy": "/cookie-policy/index.html",
+        "/compatibility-insights": "/compatibility-insights/index.html"
+      };
+      var normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
+      if (legalPages[normalizedPath]) {
+        window.location.replace(legalPages[normalizedPath] + window.location.search + window.location.hash);
+        return;
+      }
+    })();
+    window.KINDREDCUBE_API_URL =
+      window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+        ? "http://localhost:3001"
+        : "https://api.kindredcube.com";
+  </script>
+  <script src="/_expo/static/js/web/index-e0295a92df9fd37987ae4deb5baff599.js" defer></script>
 </body>
 </html>

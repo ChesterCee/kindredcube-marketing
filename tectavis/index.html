@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Tectavis Secure Portal</title>
+    <meta name="description" content="Restricted Tectavis administration portal for KindredCube." />
+    <style id="expo-reset">
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to access this page.</noscript>
+    <div id="root"></div>
+    <script>
+      window.KINDREDCUBE_API_URL =
+        window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+          ? "http://localhost:3001"
+          : "https://api.kindredcube.com";
+    </script>
+    <script src="/_expo/static/js/web/index-bb29b7b7cda72ac1ff414d078bf6410c.js" defer></script>
+  </body>
+</html>
