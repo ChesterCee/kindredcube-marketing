@@ -786,7 +786,7 @@ body.policy-page .policy-document {
   .download-card span { font-size: .88rem; line-height: 1.25; }
   .back-link { margin-top: 18px; }
   .header-link { font-size: .82rem; }
-  .home-signin-link { top: 72px; right: 18px; min-height: 38px; font-size: 12px; padding: 8px 13px; }
+  .home-signin-link { top: calc(env(safe-area-inset-top, 0px) + 18px); right: 18px; min-height: 38px; font-size: 12px; padding: 8px 13px; }
   .home-footer { display: none; }
   .site-footer { padding: 28px 18px 24px; }
   .site-footer-grid { grid-template-columns: 1fr; gap: 18px; }
