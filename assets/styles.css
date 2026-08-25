@@ -810,37 +810,53 @@ body.policy-page .site-footer {
   .policy-document { padding: 24px 18px; border-radius: 22px; }
   body.policy-page .policy-main {
     width: 100%;
-    padding: 10px 12px 10px;
+    padding: 8px 10px 6px;
   }
   body.policy-page .policy-document {
     border-radius: 22px;
-    padding: 20px 16px 26px;
+    padding: 18px 15px 24px;
   }
   body.policy-page .site-footer {
-    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+    padding: 5px 10px calc(5px + env(safe-area-inset-bottom, 0px));
+    border-top-color: rgba(19, 27, 61, .06);
   }
   body.policy-page .site-footer-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px 10px;
   }
   body.policy-page .site-footer-brand {
     display: none;
   }
   body.policy-page .site-footer-column h2 {
-    margin-bottom: 4px;
-    font-size: .58rem;
-    letter-spacing: .06em;
+    display: none;
   }
   body.policy-page .site-footer-column a {
-    margin: 3px 0;
-    font-size: .64rem;
-    line-height: 1.25;
+    display: inline-flex;
+    margin: 0 5px 0 0;
+    font-size: .57rem;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+  body.policy-page .site-footer-column {
+    display: contents;
   }
   body.policy-page .site-footer-bottom {
-    margin-top: 7px;
-    padding-top: 6px;
-    font-size: .58rem;
-    line-height: 1.25;
+    margin-top: 4px;
+    padding-top: 3px;
+    font-size: .52rem;
+    line-height: 1.1;
+    text-align: center;
+  }
+  body.policy-page .policy-document h1 {
+    font-size: clamp(1.75rem, 8vw, 2.45rem);
+  }
+  body.policy-page .policy-document p,
+  body.policy-page .policy-document li {
+    font-size: .92rem;
+    line-height: 1.58;
   }
   .policy-document h2 { margin-top: 30px; }
   .glass-page-arrow { width: 48px; height: 62px; border-radius: 18px; }
