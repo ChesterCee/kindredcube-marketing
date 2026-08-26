@@ -13,6 +13,25 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kindredcube.com/">
     <meta name="twitter:card" content="summary_large_image">
+    <script>
+      (function () {
+        var staticPages = {
+          "/about": "/about/index.html",
+          "/privacy": "/privacy/index.html",
+          "/privacy-policy": "/privacy/index.html",
+          "/terms": "/terms/index.html",
+          "/community-guidelines": "/community-guidelines/index.html",
+          "/delete-account": "/delete-account/index.html",
+          "/cookie-policy": "/cookie-policy/index.html",
+          "/compatibility-insights": "/compatibility-insights/index.html"
+        };
+        var normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
+        var staticTarget = staticPages[normalizedPath];
+        if (staticTarget) {
+          window.location.replace(staticTarget + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
     <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
     <style id="expo-reset">
       /* These styles make the body full-height */
@@ -51,22 +70,6 @@
       <a href="/support/">Support</a>
     </footer>
   <script>
-    (function () {
-      var legalPages = {
-        "/about": "/about/index.html",
-        "/privacy": "/privacy/index.html",
-        "/terms": "/terms/index.html",
-        "/community-guidelines": "/community-guidelines/index.html",
-        "/delete-account": "/delete-account/index.html",
-        "/cookie-policy": "/cookie-policy/index.html",
-        "/compatibility-insights": "/compatibility-insights/index.html"
-      };
-      var normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
-      if (legalPages[normalizedPath]) {
-        window.location.replace(legalPages[normalizedPath] + window.location.search + window.location.hash);
-        return;
-      }
-    })();
     window.KINDREDCUBE_API_URL =
       window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
         ? "http://localhost:3001"
