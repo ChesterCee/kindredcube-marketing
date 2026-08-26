@@ -40,6 +40,13 @@
     if (!page || !page.title || !page.body) return;
     const article = document.querySelector("[data-legal-document]");
     if (!article) return;
+
+    const currentStaticText = article.textContent || "";
+    const remoteBody = String(page.body || "").trim();
+    const remoteLooksComplete = remoteBody.length >= 1500;
+    const remoteIsLongerThanStatic = remoteBody.length >= Math.min(1500, Math.floor(currentStaticText.length * 0.65));
+    if (!remoteLooksComplete || !remoteIsLongerThanStatic) return;
+
     article.textContent = "";
 
     const title = document.createElement("h1");
@@ -79,11 +86,6 @@
       article.appendChild(figure);
     });
 
-    const back = document.createElement("a");
-    back.className = "policy-home";
-    back.href = "../";
-    back.textContent = "Back to home";
-    article.appendChild(back);
   }
 
   fetch(`${API_URL}/v1/legal-content/${encodeURIComponent(currentSlug())}`, { cache: "no-store" })
