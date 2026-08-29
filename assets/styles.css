@@ -798,6 +798,10 @@ body.policy-page .site-footer {
   .profile-card[data-position="-1"] { transform: translateX(calc(var(--card-width) * -.67)) scale(.78) rotateY(10deg); }
   .profile-card[data-position="1"] { transform: translateX(calc(var(--card-width) * .67)) scale(.78) rotateY(-10deg); }
   .profile-card[data-position="-2"], .profile-card[data-position="2"] { opacity: 0; }
+  [aria-label="Like this profile and show the next person"] {
+    left: calc(50% + min(27vw, 112px)) !important;
+    top: min(40dvh, 315px) !important;
+  }
   .download-grid { grid-template-columns: 1fr; max-width: 420px; }
   .download-main { padding: 0 16px 24px; }
   .download-copy { margin: 4px 0 18px; }
